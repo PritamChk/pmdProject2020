@@ -14,7 +14,7 @@ Original file is located at
 
 #web app libraries
 from flask import Flask,request,render_template,flash,url_for,redirect
-from flask_ngrok import run_with_ngrok
+#from flask_ngrok import run_with_ngrok
 
 #OS and Measure Time
 import os
