@@ -1,0 +1,165 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #131419;
+}
+.card {
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  min-width: 100;
+  max-width: 400px;
+  background-color: #131419;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+              5px 5px 15px rgba(0,0,0,.5);
+}
+.card form{
+  margin: 2px;
+  padding: 5px;
+  font-size: 21px;
+}
+
+.card form .inputBox{
+  margin: 2px;
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.card form .inputBox .one{
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.card form .inputBox .two{
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.card form .inputBox .three{
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.card form .inputBox.one input{
+  padding: 15px;
+  font-size: larger;
+  margin: 20px;
+  border:none;
+  outline:none;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50%;
+  background: #131419;
+  color:rgba(15, 235, 132, 0.856);
+  border-radius: 13px;
+  box-shadow: inset -2px -2px 6px rgba(255,255,255,0.05),
+              inset 2px 2px 4px rgba(0,0,0,.5);
+}
+
+.card form .inputBox.two input{
+  margin: 20px;
+  padding: 15px;
+  font-size: larger;
+  padding: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50%;
+  background: red;
+  border:none;
+  outline:none;
+
+  background: #131419;
+  color:rgba(31, 204, 195, 0.822);
+  border-radius: 13px;
+  box-shadow: inset -2px -2px 6px rgba(255,255,255,0.05),
+              inset 2px 2px 4px rgba(0,0,0,.5);
+}
+.card form .inputBox.three input{
+  margin: 20px;
+  padding: 10px;
+  font-size: larger;
+  text-align: center;
+  width: 70%;
+  height: 50%;
+  background: #131419;
+  color:rgba(31, 207, 31, 0.849);
+  border-radius: 13px;
+  box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+              5px 5px 15px rgba(0,0,0,.5);
+  border:none;
+  outline:none;
+} 
+
+.card form .inputBox.three input:active{
+  
+  box-shadow: inset -2px -3px 5px rgba(255,255,255,0.05),
+              inset 2px 2px 5px rgba(0,0,0,.5);
+} 
+
+.card form .inputBox.three input:hover{
+  
+  color : rgb(170, 228, 170);
+  text-shadow: -4px -3px 9px green,
+  2px 3px 9px rgb(27, 219, 162);
+}
+.card h1{
+  color: #e01c1cd2;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 5px;
+  padding: 4px; 
+}
+.card h3{
+  color: #1ce046b0;
+  font-weight: 200;
+  letter-spacing: 5px;
+  margin: 10px;
+  padding: 14px; 
+}
+.card form .inputBox label{
+  color: #29e7f5de;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 5px;
+  padding: 4px; 
+}
+
+.card form .file-upload{
+  background-color: #131419;
+  border-radius: 13px;
+  box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+              5px 5px 15px rgba(0,0,0,.5);
+  border:none;
+  outline:none;
+  color: white;
+}
+.card form .btn{
+  margin: 1em;
+  padding: 4px;
+  width: 50%;
+  height: 50%;
+  background-color: #131419;
+  border-radius: 13px;
+  box-shadow: -5px -5px 10px rgba(255,255,255,0.05),
+              5px 5px 15px rgba(0,0,0,.5);
+  border:none;
+  outline:none;
+  color: white;
+}
+.card form .btn:active{
+	box-shadow: inset -2px -2px 5px rgba(255,255,255,0.05),
+              inset 2px 2px 6px rgba(0,0,0,.5);
+}

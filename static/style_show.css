@@ -1,0 +1,74 @@
+*{
+    font-size: 17px;
+    font-weight: 450;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #131418;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+}
+img{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2 ;
+    width: 75%;
+    max-height: 73%;
+    padding: 3px;
+    margin-left: 1em;
+    margin-right: 1em;
+    outline: none;
+    border-radius: 12px;
+    box-shadow:  -5px -5px 20px rgba(255, 255, 255, 0.5),
+    5px 5px 28px rgba(0, 0, 0, 0.05)
+    ;
+    transition: width 1.3s;
+    /*transform: skew(.01deg,.02deg);*/
+}
+img:hover{
+    width: 77%;
+    height: 74%;
+    box-shadow:  -5px -5px 20px rgba(177, 42, 42, 0.5),
+    5px 5px 28px rgba(27, 160, 194, 0.589)
+}
+.card{
+    margin: 2rem;
+    padding: 10px;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: center;
+}
+.card form input{
+    background-color: rgba(14, 10, 10, 0.822);
+    border: none;
+    outline: none;
+    font-size: 23px;
+    color: rgba(10, 173, 132, 0.822);
+    padding: 10px;
+    margin: 3px;
+    border-radius: 1rem;
+    box-shadow:  -5px -5px 12px rgba(255, 255, 255, 0.05),
+    5px 5px 12px rgba(0, 0, 0, 0.5)
+    ;
+}
+.card form input:hover{
+    color: rgb(158, 57, 57);
+    text-shadow : -2px -3px 10px rgba(211, 14, 47, 0.822);
+}
+.card form input:active{
+    box-shadow: inset -3px -2px 7px rgba(255, 255, 255, 0.05),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+    color: rgba(102, 197, 13, 0.801);
+    text-shadow :none;
+}
+
+
