@@ -170,7 +170,7 @@ def predict_my_image():
   print(f"\nuploaded image name {FileName}\n")
   #path_to_img=os.path.join(app.config['IMAGE_UPLOAD'],image_name)
   ans=predict_the_class(load_PMD_model(),get_image(FileName))  #this is a change
-  #delete_img_folder()
+  delete_img_folder()       #New change
   return render_template('result.html',Ans=ans)
 
 if __name__=="__main__":
