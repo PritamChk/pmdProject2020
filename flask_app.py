@@ -141,7 +141,7 @@ def home_page():
 def upload_img():
   #delete_img_folder()
   if request.method=="POST":
-    #app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
+    app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
     if request.files and request.files['myImage'].filename != '' :
       filename=request.files['myImage']
