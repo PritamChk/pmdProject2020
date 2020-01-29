@@ -61,7 +61,7 @@ def make_img_folder():
     os.mkdir(path_change)
     print(f'\n\n{path_change} dir created\n\n')
     return path_change
-   return None
+   return path_change
 
 """#Load Model"""
 
