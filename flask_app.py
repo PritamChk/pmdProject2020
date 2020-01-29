@@ -18,6 +18,7 @@ from flask import Flask,request,render_template,flash,url_for,redirect
 
 #OS and Measure Time
 import os
+import shutil
 from time import perf_counter
 
 #preprocessing libraries
@@ -40,6 +41,8 @@ def delete_img_folder():
     return None
   path_to_img_folder=os.path.join(os.getcwd(),'static','images')
   print(path_to_img_folder)
+  shutil.rmtree(path_to_img_folder, ignore_errors=True)
+  """
   imgs=os.listdir(path_to_img_folder)
   for i in imgs:
     rpath=os.path.join(path_to_img_folder,i)
@@ -47,6 +50,7 @@ def delete_img_folder():
     os.remove(rpath)
   os.rmdir(path_to_img_folder)
   print("\n\nImage dir deleted\n\n")
+  """
 
 """#Create Image Folder to store uploaded image"""
 
