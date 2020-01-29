@@ -46,6 +46,7 @@ def delete_img_folder():
     print(rpath)
     os.remove(rpath)
   os.rmdir(path_to_img_folder)
+  print("\n\nImage dir deleted\n\n")
 
 """#Create Image Folder to store uploaded image"""
 
@@ -54,7 +55,7 @@ def make_img_folder():
   #print(path_change)
   if not os.path.isdir(path_change):        
     os.mkdir(path_change)
-    print(f'{path_change} dir created')
+    print(f'\n\n{path_change} dir created\n\n')
     return path_change
 
 """#Load Model"""
@@ -148,8 +149,9 @@ def upload_img():
       global FileName
       FileName=filename.filename
       path='../static/images'
-      path=os.path.join(path,filename.filename)
-      print(f"path of the image : {path}")
+      path=os.path.join(path,FileName)
+      print(f"\npath of the image  to show: {path}")
+      print("\nIn uploading route\n")
       #path="../static/uploaded_images/"
       return render_template("img.html",fileName=path)
       #return render_template("index.html",val=k,msg="Plz Upload Again",sz=fSize(pathJoin(app.config['IMAGE_UPLOAD'],filename.filename))//(1024*1024))
@@ -163,8 +165,9 @@ def upload_img():
 @app.route('/predict')
 def predict_my_image():
   global FileName
+  print("\nIn Predicting route\n\n")
   #image_name=os.listdir(app.config['IMAGE_UPLOAD'])        #This is a change
-  print(f"uploaded image name {FileName}")
+  print(f"\nuploaded image name {FileName}\n")
   #path_to_img=os.path.join(app.config['IMAGE_UPLOAD'],image_name)
   ans=predict_the_class(load_PMD_model(),get_image(FileName))  #this is a change
   #delete_img_folder()
