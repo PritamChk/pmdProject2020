@@ -124,7 +124,7 @@ def predict_the_class(model,image):
 
 app=Flask(__name__)
 #run_with_ngrok(app)
-FileName="random.png"
+FileName="none.png"
 app.config['SECRET_KEY']="LoL 13 NoOne Can Guess This Key XD"
 #app.config['DEBUG']=True
 app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
@@ -162,6 +162,7 @@ def upload_img():
 
 @app.route('/predict')
 def predict_my_image():
+  global FileName
   #image_name=os.listdir(app.config['IMAGE_UPLOAD'])        #This is a change
   print(f"uploaded image name {FileName}")
   #path_to_img=os.path.join(app.config['IMAGE_UPLOAD'],image_name)
