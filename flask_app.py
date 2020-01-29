@@ -29,8 +29,8 @@ from tensorflow.keras.utils import to_categorical
 # Model Loading Library
 from tensorflow.keras.models import load_model,model_from_json
 
-#path=os.getcwd()
-#print(path)
+path=os.getcwd()
+print(f"\nworking Dir=> {path}\n\nFiles in Static folder {os.listdir(os.path.join(path,'static'))}\n\n")
 
 """#Delete Uploaded Images from server"""
 
@@ -83,6 +83,7 @@ def load_PMD_model():
 
 def get_image(imageName):
   path_to_img=os.path.join(os.getcwd(),f'static/images/{imageName}')
+  print(f"\n\n We are processing {path_to_img}\n\n"
   img=load_img(path_to_img)
   #display(img)
   img_arr=np.resize(img_to_array(img),[128,128,3])
@@ -141,7 +142,7 @@ def home_page():
 def upload_img():
   #delete_img_folder()
   if request.method=="POST":
-    app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
+    #app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
     if request.files and request.files['myImage'].filename != '' :
       filename=request.files['myImage']
