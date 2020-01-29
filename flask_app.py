@@ -141,7 +141,7 @@ def home_page():
 def upload_img():
   #delete_img_folder()
   if request.method=="POST":
-    app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
+    #app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
     if request.files and request.files['myImage'].filename != '' :
       filename=request.files['myImage']
@@ -172,7 +172,7 @@ def predict_my_image():
   print(f"\nuploaded image name {FileName}\n")
   #path_to_img=os.path.join(app.config['IMAGE_UPLOAD'],image_name)
   ans=predict_the_class(load_PMD_model(),get_image(FileName))  #this is a change
-  delete_img_folder()       #New change
+  #delete_img_folder()       #New change
   return render_template('result.html',Ans=ans)
 
 if __name__=="__main__":
