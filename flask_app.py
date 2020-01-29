@@ -61,7 +61,7 @@ def make_img_folder():
     os.mkdir(path_change)
     print(f'\n\n{path_change} dir created\n\n')
     return path_change
-  return path_change
+  #return path_change
 
 """#Load Model"""
 
@@ -134,7 +134,7 @@ app=Flask(__name__)
 FileName="none.png"
 app.config['SECRET_KEY']="LoL 13 NoOne Can Guess This Key XD"
 #app.config['DEBUG']=True
-delete_img_folder()
+#delete_img_folder()
 app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
 
 @app.route('/')
@@ -145,9 +145,9 @@ def home_page():
 
 @app.route('/upload',methods=["POST","GET"])
 def upload_img():
-  #delete_img_folder()
+  delete_img_folder()
   if request.method=="POST":
-    #app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
+    app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
     if request.files and request.files['myImage'].filename != '' :
       filename=request.files['myImage']
