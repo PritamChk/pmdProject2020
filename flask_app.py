@@ -167,7 +167,7 @@ def upload_img():
 
 @app.route('/predict')
 def predict_my_image():
-  global FileName
+  #global FileName
   print("\nIn Predicting route\n\n")
   #image_name=os.listdir(app.config['IMAGE_UPLOAD'])        #This is a change
   print(f"\nuploaded image name {FileName}\n")
