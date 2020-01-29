@@ -128,16 +128,18 @@ app=Flask(__name__)
 FileName="none.png"
 app.config['SECRET_KEY']="LoL 13 NoOne Can Guess This Key XD"
 #app.config['DEBUG']=True
+delete_img_folder()
 app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
 
 @app.route('/')
 def home_page():
   #path_to_images=make_img_folder()
+  #delete_img_folder()
   return render_template('index.html',val=False,msg="Upload an Image")
 
 @app.route('/upload',methods=["POST","GET"])
 def upload_img():
-  delete_img_folder()
+  #delete_img_folder()
   if request.method=="POST":
     app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
