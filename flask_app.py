@@ -145,6 +145,7 @@ def upload_img():
       print(filename)
       filename.save(os.path.join(app.config['IMAGE_UPLOAD'],filename.filename))
       k=True
+      global FileName
       FileName=filename.filename
       path='../static/images'
       path=os.path.join(path,filename.filename)
