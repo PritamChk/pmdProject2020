@@ -140,9 +140,9 @@ def home_page():
 
 @app.route('/upload',methods=["POST","GET"])
 def upload_img():
-  #delete_img_folder()
+  delete_img_folder()
   if request.method=="POST":
-    #app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
+    app.config['IMAGE_UPLOAD']=make_img_folder()#os.path.join(os.getcwd(),'static','images')
     k=False
     if request.files and request.files['myImage'].filename != '' :
       filename=request.files['myImage']
@@ -167,7 +167,7 @@ def upload_img():
 
 @app.route('/predict')
 def predict_my_image():
-  #global FileName
+  global FileName
   print("\nIn Predicting route\n\n")
   #image_name=os.listdir(app.config['IMAGE_UPLOAD'])        #This is a change
   print(f"\nuploaded image name {FileName}\n")
